@@ -15,7 +15,7 @@
 #import <ReactCommon/BridgeJSCallInvoker.h>
 #endif
 
-#if __has_include(<React/HermesExecutorFactory.h>)
+#if !TARGET_OS_TV && __has_include(<React/HermesExecutorFactory.h>)
 #import <React/HermesExecutorFactory.h>
 typedef HermesExecutorFactory ExecutorFactory;
 #else
